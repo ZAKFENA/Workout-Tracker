@@ -15,7 +15,7 @@
 This app is a workout tracker that saves data on MongoDB and is deployed on Heroku.\
 The user can keep adding to an existing exercise to keep track of their workouts or can create a new exercise when ever they want. The workouts can also be tracked and be displayed on a graph(dashboard link). 
 ## Screen-Shots
-![GIF](./Assets/gif.gif)
+![GIF](./assets/gif.gif)
 ![Screen Shot 1](./assets/screenshot1.PNG)
 ![Screen Shot 2](./assets/screenshot1.PNG)
 ![Screen Shot 3](./assets/screenshot1.PNG)
