@@ -1,25 +1,24 @@
-// Dependencies
 const express = require("express");
-const morgan = require("morgan");
+const logger = require("morgan");
 const mongoose = require("mongoose");
 
-// Setting up Express App
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
-app.use(morgan("dev"));
+app.use(logger("dev"));
 
-// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-// db mongo
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workout", {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false
-})
+});
+
+
 
 // Creating Routes
 require("./routes/routes")(app);
